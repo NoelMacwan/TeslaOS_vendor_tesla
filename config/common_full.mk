@@ -1,11 +1,11 @@
 # Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+$(call inherit-product, vendor/tesla/config/common.mk)
 
 # Include CM audio files
-include vendor/cm/config/cm_audio.mk
+include vendor/tesla/config/cm_audio.mk
 
 # Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/tesla/overlay/dictionaries
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
