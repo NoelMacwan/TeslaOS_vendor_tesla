@@ -130,10 +130,8 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     Eleven \
     LockClock \
-    CMUpdater \
-    CMAccount \
     CMHome \
-    CyanogenSetupWizard
+    TeslaSetupWizard
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
@@ -270,10 +268,9 @@ else
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.version=$(TESLA_VERSION) \
-  ro.cm.releasetype=$(TESLA_BUILDTYPE) \
-  ro.modversion=$(TESLA_VERSION) \
-  ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
+  ro.tesla.version=$(TESLA_VERSION) \
+  ro.tesla.releasetype=$(TESLA_BUILDTYPE) \
+  ro.teslaversion=$(TESLA_VERSION)
 
 -include vendor/cm-priv/keys/keys.mk
 
@@ -302,7 +299,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.display.version=$(TESLA_DISPLAY_VERSION)
+  ro.tesla.display.version=$(TESLA_DISPLAY_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
